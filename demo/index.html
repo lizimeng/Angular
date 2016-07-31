@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>李凯个人站</title>
+</head>
+<body>
+    <div id="app" ng-app="main">
+    <my-directive></my-directive>
+
+    </div>
+    <script type="text/javascript" src="/sea.js"></script>
+    <script type="text/javascript" src="/js/lib/seajs-preload.js"></script>
+    <script type="text/javascript" src="/js/lib/seajs-css.js"></script>
+  
+    <script type="text/javascript">
+        seajs.config({
+        	preload : ["js/lib/jquery.js","js/lib/angular-1-4-1.js"]
+        })
+
+        seajs.use('js/modules/app',function(app){
+            console.log(app)
+        	
+        })
+    </script>
+</body>
+</html>

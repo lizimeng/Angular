@@ -1,0 +1,190 @@
+  *{
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            font-size: 12px;
+        }
+        html,body,#app{
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+   
+ 
+        .stage{
+            width: 100%;
+            height:  100%;
+            border: 1px solid #000;
+          background: -webkit-radial-gradient(bottom,ellipse cover,#77FFFD 0,#0B52BC 77%,#035 100%);
+            perspective:1500px;
+        }
+        .stage .cube{
+            width:  100%;
+            height:  100%;
+            max-width: 83.3rem;
+            margin: 0 auto;
+            position: relative;
+              transition : all 1.5s ease 0s;
+              transform-style:preserve-3d;
+             animation:move 2s linear 0s ;
+              /*transform: rotateX(100deg)  rotateY(100deg)  translateZ(-12000px);*/
+            
+        }
+            @-webkit-keyframes move{
+            0%{
+                transform:   translateZ(-10200px);
+
+            }
+            100% {
+                 transform:  translateZ(0px);
+            }
+        }
+        .stage .cube .face{
+            width:  100%;
+            height:  100%;
+            max-width: 83.3rem;
+            text-align: center;
+            line-height:  100%;
+            font-size: 60px;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+     
+      
+
+.stage .cube div.face_home {
+    transform:translateZ(41.6rem);
+      background-color: rgba(110,230,250,.8);
+     z-index: 2;
+ }
+.stage .cube div.face_skil {
+    transform:rotateY(90deg) translateZ(41.6rem);
+    background-color: rgba(200,100,200,.8);
+}
+.stage .cube div.face_project {
+    transform:rotateY(180deg) translateZ(41.6rem);
+   background-color: rgba(250,100,100,.8);
+}
+.stage .cube div.face_info {
+    transform:rotateY(270deg) translateZ(41.6rem);
+     background-color: rgba(110,0,250,.8);
+}
+
+ .stage .cube div.face_home {
+
+ }
+.stage .cube div.face_home .photo {
+    width: 200px;
+    height: 200px;
+    float: left;
+    margin: 12rem 15rem;
+    margin-right: 0;
+}
+.stage .cube div.face_home .photo img {
+    width: 100%;
+    height: 100%;
+}
+.stage .cube div.face_home .summary {
+     width: 250px;
+     float: right;
+     text-align: left;
+     position: relative;
+     top: 8rem;
+     right: 10rem;
+     position: relative;
+
+}
+.stage .cube div.face_home .summary  h1 {
+    font-size: 26px;
+    font-family: "楷体";
+    text-align: center;
+   position: relative;
+   top: -500px;
+    opacity: 0;
+    transition: all 2.2s cubic-bezier(.83,.91,.84,1.15) 0s;
+}
+.stage .cube div.face_home .summary li {
+    list-style: none;
+     font-size: 16px;
+     height: 40px;
+     position: relative;
+     /*width: 100px;*/
+     left: 500px;
+     opacity: 0;
+
+}
+.stage .cube div.face_home .summary li a {
+    text-decoration: none;
+}
+.stage .cube div.face_skil  .htmleaf-container {
+   position: absolute;
+   top : 12.5rem;
+   right : 19rem;
+}
+.stage .cube div.face_skil .content-skil {
+   font-size: 14px;
+   width: 440px;
+   height: 380px;
+   float: left;
+   padding-top: 10px;
+   margin: 110px 100px ;
+   border-radius: 15px;
+   background-color: rgba(97,63,63,.7);
+   color : #fff;
+   display: none;
+}
+.stage .cube div.face_skil .clone {
+    width: 440px;
+   height: 380px;
+   float: left;
+   padding-top: 10px;
+   margin: 110px 100px ;
+  position: absolute;
+   /*background-color: rgba(97,63,63,.7);*/
+  top:-1px;
+  left: -1px;
+}
+.stage .cube div.face_skil .content-skil p {
+    margin-bottom: 15px;
+    text-align: left;
+    padding-left: 15px;
+    line-height: 20px;
+}
+.stage .cube div.face_skil .content-skil p strong {
+    color: #aef;
+    font-weight: normal;
+}
+.stage .cube div.face_project .content-project {
+     width: 65rem;
+     margin: 5rem auto;
+}
+.stage .cube div.face_project .content-project li {
+    list-style: none;
+      line-height: 20px;
+      font-size: 14px;
+      width: 14rem;
+      height: 14rem;
+      padding: 10px;
+      border-radius: 10px;
+      background-color: rgba(97,63,63,.7);
+      float: left;
+      margin : 50px 40px;
+      margin-bottom: 0px;
+      color : #fff;
+}
+.stage .cube div.face_project .content-project li a {
+    display: block;
+    text-align: center;
+}
+.stage .cube div.face_project .content-project li a img {
+    width: 40px;
+    height: 40px;
+}
+.stage .cube div.face_project .content-project li strong {
+    color: #9c6;
+    font-weight: normal;
+    
+}
